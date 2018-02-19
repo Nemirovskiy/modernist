@@ -1,0 +1,92 @@
+.card{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+	position: relative;
+	overflow: hidden;
+	transition-duration: .4s;
+	&_services{
+		padding: 20px 30px;
+		@include respond-to(lg) {
+			padding: 20px 10px;
+		}
+		@include respond-to(lg) {
+			margin-right: 10px;
+		}
+		@include respond-to(md) {
+			margin: 0 10px;
+		}
+	}
+	&__image_services{
+		font-size: 18px;
+		transition-duration: 0.4s;
+	}
+	&__head_services{
+		width: 100%;
+		font-size: 32px;
+		line-height: 32px;
+		margin-top: 7px;
+		margin-bottom: 22px;
+		transition-duration: 0.4s;
+		text-transform: uppercase;
+	}
+	&__text_services{
+		width: 100%;
+		font-size: 12px;
+		transition-duration: 0.4s;
+	}
+	&__text_lasted{
+		background: $bgcHead;
+		line-height: 30px;
+		text-transform: uppercase;
+		display: block;
+	    width: 100%;
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    transition-duration: .4s;
+	}
+	&_medium{
+		display: flex;
+		justify-content: center;
+		@include respond-to(xl) {
+			margin: 0 5px;
+		}
+	}
+	&_white{
+		background: $lnkc;
+	}
+	&_gray{
+		border: 5px solid $lnkc;
+		font-size: 18px;
+		background: $cardbc;
+	}
+	&_gray:hover{
+		border: 5px solid $lnkbc;
+	}
+	&__head_gray{
+		color: $cardc;
+	}
+	&__text_gray{
+		color: $textc;
+	}
+	&__image_gray{
+		background-color: #333333;
+	}
+	&_white:hover{
+		background: $lnkbc;
+	}
+	&:hover &__head_gray,
+	&:hover &__text_gray{
+		color: #fff;
+	}
+	&:hover &__image_gray{
+		background-color: $lnkc;
+		color: $cardc;
+	}
+	&:hover &__text_lasted{
+		transform: translate(0px, 35px);
+		visibility: hidden;
+	}
+}

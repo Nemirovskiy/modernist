@@ -1,0 +1,74 @@
+.slider{
+	background: $bgcHead;
+	@extend .padding-all;
+	&__container{
+		padding: 45px;
+		@include respond-to(lg) {
+			padding: 20px;
+		}
+		@include respond-to(md) {
+			padding: 10px;
+		}
+		position: relative;
+		overflow: hidden;
+	}
+	&__box{
+	    height: 380px;
+		overflow: hidden;
+	//	position: relative;
+	}
+	&__unit{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		//justify-content: space-between;
+		float: left;
+		padding: 0 30px; 
+		@include respond-to(lg) {
+			padding: 0 15px;
+		}
+		@include respond-to(md) {
+			padding: 0 5px;
+		}
+		@include respond-to(xs) {
+			flex-wrap: wrap-reverse;
+		}
+	}
+	&__descr{
+		width: 313px;
+		margin-right: 90px;
+		@include respond-to(xl) {
+			margin-right: 50px;
+		}
+		@include respond-to(md) {
+			margin-right: 10px;
+		}
+	}
+	&__head{
+		font-size: 46px;
+		line-height: 46px;
+	}
+
+	&__text{
+		font-size: 12px;
+		line-height: 20px;
+		margin: 20px 0;
+		&_gray{
+			color: $textc;			
+		}
+	}
+	&__button{
+		width: 15px;
+		height: 28px;
+		position: absolute;
+		top: 50%;
+		margin-top: -14px;
+		background: $lnkbc;
+		&_right{
+			right: 0;
+		}
+		&_left{
+			left:0;
+		}
+	}
+}

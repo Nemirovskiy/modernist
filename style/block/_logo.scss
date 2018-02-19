@@ -1,0 +1,13 @@
+.logo{
+	&__item{
+		&_white{
+			font-size: 28px;
+			line-height: 28px;
+		}
+		&_gray{
+			color:  $textc;
+			font-size: 11px;
+		}
+	}
+	
+}

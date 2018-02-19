@@ -1,0 +1,28 @@
+.services{
+	@extend .padding-all;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 60px 0 40px 0;//
+		@include respond-to(lg) {
+			margin: 20px 0;
+		}
+	&__unit{
+		width: calc(25% - 15px);
+		margin-right: 20px;
+		&:nth-of-type(4){
+			margin-right: 0;
+		}
+		@include respond-to(md) {
+			width: 50%;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+		@include respond-to(xs) {
+			width: 90%;
+			margin: 5px auto;
+		&:nth-of-type(4){
+			margin: 5px auto;
+		}
+		}
+	}
+} 
